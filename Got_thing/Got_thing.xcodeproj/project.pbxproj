@@ -28,6 +28,13 @@
 		0CEDAF7029DAB7FA0094C4F8 /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEDAF6F29DAB7FA0094C4F8 /* MyPageViewModel.swift */; };
 		0CEDAF7229DAB8050094C4F8 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEDAF7129DAB8050094C4F8 /* ChatViewModel.swift */; };
 		0CEDAF7429DAB83B0094C4F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEDAF7329DAB83B0094C4F8 /* User.swift */; };
+		0CEDAF7729DBE1D90094C4F8 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEDAF7629DBE1D90094C4F8 /* KakaoSDKAuth */; };
+		0CEDAF7929DBE1D90094C4F8 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEDAF7829DBE1D90094C4F8 /* KakaoSDKCommon */; };
+		0CEDAF7B29DBE1D90094C4F8 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEDAF7A29DBE1D90094C4F8 /* KakaoSDKUser */; };
+		0CEDAF7E29DBE2720094C4F8 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEDAF7D29DBE2720094C4F8 /* GoogleSignIn */; };
+		0CEDAF8029DBE2720094C4F8 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEDAF7F29DBE2720094C4F8 /* GoogleSignInSwift */; };
+		0CEDAF8329DBE3AF0094C4F8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEDAF8229DBE3AF0094C4F8 /* Kingfisher */; };
+		0CEDAF8629DD00A70094C4F8 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEDAF8529DD00A70094C4F8 /* AuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +60,7 @@
 		0CEDAF6F29DAB7FA0094C4F8 /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
 		0CEDAF7129DAB8050094C4F8 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		0CEDAF7329DAB83B0094C4F8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0CEDAF8529DD00A70094C4F8 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CEDAF8329DBE3AF0094C4F8 /* Kingfisher in Frameworks */,
+				0CEDAF8029DBE2720094C4F8 /* GoogleSignInSwift in Frameworks */,
+				0CEDAF7929DBE1D90094C4F8 /* KakaoSDKCommon in Frameworks */,
+				0CEDAF7E29DBE2720094C4F8 /* GoogleSignIn in Frameworks */,
+				0CEDAF7729DBE1D90094C4F8 /* KakaoSDKAuth in Frameworks */,
+				0CEDAF7B29DBE1D90094C4F8 /* KakaoSDKUser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				0CEDAF3529DAB1110094C4F8 /* ContentView.swift */,
+				0CEDAF8429DD00960094C4F8 /* Auth */,
 				0CEDAF6329DAB6610094C4F8 /* MyPage */,
 				0CEDAF6229DAB6350094C4F8 /* Chat */,
 				0CEDAF6029DAB6260094C4F8 /* Home */,
@@ -214,6 +229,14 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
+		0CEDAF8429DD00960094C4F8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0CEDAF8529DD00A70094C4F8 /* AuthView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +253,14 @@
 			dependencies = (
 			);
 			name = Got_thing;
+			packageProductDependencies = (
+				0CEDAF7629DBE1D90094C4F8 /* KakaoSDKAuth */,
+				0CEDAF7829DBE1D90094C4F8 /* KakaoSDKCommon */,
+				0CEDAF7A29DBE1D90094C4F8 /* KakaoSDKUser */,
+				0CEDAF7D29DBE2720094C4F8 /* GoogleSignIn */,
+				0CEDAF7F29DBE2720094C4F8 /* GoogleSignInSwift */,
+				0CEDAF8229DBE3AF0094C4F8 /* Kingfisher */,
+			);
 			productName = Got_thing;
 			productReference = 0CEDAF3029DAB1110094C4F8 /* Got_thing.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +289,11 @@
 				Base,
 			);
 			mainGroup = 0CEDAF2729DAB1110094C4F8;
+			packageReferences = (
+				0CEDAF7529DBE1D90094C4F8 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				0CEDAF7C29DBE2710094C4F8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				0CEDAF8129DBE3AF0094C4F8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 0CEDAF3129DAB1110094C4F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -290,6 +326,7 @@
 				0CEDAF6E29DAB7F00094C4F8 /* HomeViewModel.swift in Sources */,
 				0CEDAF6929DAB7940094C4F8 /* HomeView.swift in Sources */,
 				0CEDAF4C29DAB2E60094C4F8 /* Ex+EmptyPlaceholder.swift in Sources */,
+				0CEDAF8629DD00A70094C4F8 /* AuthView.swift in Sources */,
 				0CEDAF7029DAB7FA0094C4F8 /* MyPageViewModel.swift in Sources */,
 				0CEDAF4829DAB2680094C4F8 /* Ex+Color.swift in Sources */,
 				0CEDAF5029DAB2EF0094C4F8 /* Ex+View.swift in Sources */,
@@ -503,6 +540,66 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0CEDAF7529DBE1D90094C4F8 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		0CEDAF7C29DBE2710094C4F8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		0CEDAF8129DBE3AF0094C4F8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0CEDAF7629DBE1D90094C4F8 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CEDAF7529DBE1D90094C4F8 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		0CEDAF7829DBE1D90094C4F8 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CEDAF7529DBE1D90094C4F8 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		0CEDAF7A29DBE1D90094C4F8 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CEDAF7529DBE1D90094C4F8 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+		0CEDAF7D29DBE2720094C4F8 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CEDAF7C29DBE2710094C4F8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		0CEDAF7F29DBE2720094C4F8 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CEDAF7C29DBE2710094C4F8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		0CEDAF8229DBE3AF0094C4F8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CEDAF8129DBE3AF0094C4F8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0CEDAF2829DAB1110094C4F8 /* Project object */;
 }
